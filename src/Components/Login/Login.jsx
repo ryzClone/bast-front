@@ -58,7 +58,7 @@ const Login = () => {
             Вышли проблемы? Обращайтесь администратору
           </p>
           <div className="form-group">
-            <label htmlFor="phone">Логин</label>
+            <label htmlFor="phone">Логин --  none</label>
             <input
               type="text"
               id="phone"
@@ -70,7 +70,7 @@ const Login = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Пароль</label>
+            <label htmlFor="password">Пароль -- 123</label>
             <div className="password-container">
               <input
                 type={showPassword ? "text" : "password"} // Parolni ko'rsatish yoki yashirish
