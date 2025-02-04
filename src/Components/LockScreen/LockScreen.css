@@ -1,0 +1,75 @@
+/* LockScreen.css */
+
+.lockscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(68, 34, 85, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lockscreen-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 500px;
+    position: relative;
+    z-index: 2;
+}
+
+.lockscreen-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.password-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.lockscreen-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.lock-password-toggle-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-80%);
+    cursor: pointer;
+}
+
+.lockscreen-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #442255;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.lockscreen-box button:hover {
+    background-color: #673780;
+}
+
+.lockscreen-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5; /* Orqa fonning yarim shaffof bo'lishi */
+    z-index: 1;
+}

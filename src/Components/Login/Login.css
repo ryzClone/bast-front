@@ -1,0 +1,289 @@
+/* Login.css */
+.login-page {
+  display: flex;
+  height: 100vh;
+}
+
+.login-form-container {
+  width: 40%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  width: 100%;
+  max-width: 450px;
+}
+
+.logo-and-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 80px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+}
+.company-name {
+  font-size: 30px;
+  color: #4a235a;
+}
+
+.company-description {
+  font-size: 18px;
+  color: #4a235a;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.support-text {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #4a235a;
+  outline: none;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+.forgot-password {
+  display: block;
+  font-size: 12px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 55%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4a235a;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #6c3483;
+}
+
+.image-container {
+  max-width: 60%;
+  display: flex;
+  background-color: #f8f9fa;
+  padding: 150px;
+}
+
+.image {
+  max-width: 50vw;
+  object-fit: cover;
+}
+
+/* Additions for the image slider */
+.image-slider {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  transition: all 3s ease;
+}
+
+.slider-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: all 3s ease;
+}
+
+.slider-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Nuqtalar konteyneri */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* Nuqta o'zgarishi uchun animatsiya */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50px;
+  display: inline-block;
+  cursor: pointer;
+  transition: width 3s ease-in-out; /* Vaqtni 3 sekundga qisqartirish */
+}
+
+/* Faollashgan nuqta */
+.dot.active {
+  height: 10px; /* Height o'zgarmaydi */
+  background-color: #4a235a; /* Faollashgan rang */
+  animation: dotAnimation 3s forwards; /* Animatsiya vaqti 3 sekund */
+}
+
+/* Passiv nuqta */
+.dot.inactive {
+  width: 10px; /* Oddiy nuqta uchun kichik width */
+  background-color: #bbb;
+}
+
+/* Animatsiya: nuqta kengayib, kichrayadi va qaytadi */
+@keyframes dotAnimation {
+  0% {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+  }
+  100% {
+    height: 10px;
+    width: 50px; /* Kengayish */
+    background-color: #4a235a; /* Faollashgan rang */
+  }
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 1440px) {
+  .login-form-container {
+    width: 40%;
+    padding: 30px;
+  }
+
+  .login-form {
+    max-width: 350px;
+  }
+
+  .company-name {
+    font-size: 22px;
+  }
+
+  .input-field {
+    font-size: 13px;
+  }
+
+  .submit-button {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .login-form-container {
+    width: 40%;
+    padding: 50px;
+  }
+
+  .login-form {
+    max-width: 450px;
+  }
+
+  .company-name {
+    font-size: 26px;
+  }
+
+  .input-field {
+    font-size: 15px;
+  }
+
+  .submit-button {
+    font-size: 18px;
+  }
+  .image {
+    width: 60vw;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .login-form-container {
+    width: 40%;
+    padding: 60px;
+  }
+
+  .login-form {
+    max-width: 500px;
+  }
+
+  .company-name {
+    font-size: 28px;
+  }
+
+  .input-field {
+    font-size: 16px;
+  }
+
+  .submit-button {
+    font-size: 20px;
+  }
+  .image {
+    width: 60vw;
+    object-fit: cover;
+  }
+}
